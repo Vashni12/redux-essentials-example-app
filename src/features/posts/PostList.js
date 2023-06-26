@@ -2,6 +2,8 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
+import { PostAuthor } from './PostAuthor';
+
 
 
 export const PostsList = () => {
@@ -17,6 +19,8 @@ export const PostsList = () => {
             <Link to={`/posts/${post.id}`} className='button muted-button'>
                 View Post
             </Link>
+            <br></br>
+            <PostAuthor userId={post.user} />
         </article>
     ))
 

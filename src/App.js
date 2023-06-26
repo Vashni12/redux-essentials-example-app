@@ -12,7 +12,7 @@ import { PostsList } from './features/posts/PostList'
 import { AddPostForm } from './features/posts/AddPostForm'
 import { SinglePostPage } from './features/posts/SinglePostPage'
 import { EditPostForm } from './features/posts/EditPostForm'
-
+import { Profiles } from './features/users/Profiles'
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
           />
           <Route exact path="/posts/:postId" component={SinglePostPage}/>
           <Route exact path="/createPost" component = {AddPostForm}/>
+          <Route exact path="/Profiles" component={Profiles}/>
           <Route exact path="/editPost/:postId" component={EditPostForm}/>
           
           <Redirect to="/" />

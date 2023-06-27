@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
 
-export default function Basic() {
+export const  ProfileCard = ({profile}) => {
   return (
     <div className="vh-100" style={{ backgroundColor: '#9de2ff' }}>
       <MDBContainer>
@@ -18,14 +18,14 @@ export default function Basic() {
                       fluid />
                   </div>
                   <div className="flex-grow-1 ms-3">
-                    <MDBCardTitle>Danny McLoan</MDBCardTitle>
-                    <MDBCardText>Senior Journalist</MDBCardText>
+                    <MDBCardTitle>{profile.name}</MDBCardTitle>
+                    <MDBCardText>{profile.status}</MDBCardText>
 
                     <div className="d-flex justify-content-start rounded-3 p-2 mb-2"
                       style={{ backgroundColor: '#efefef' }}>
                       <div>
                         <p className="small text-muted mb-1">Articles</p>
-                        <p className="mb-0">41</p>
+                        <p className="mb-0">{profile.posts}</p>
                       </div>
                       <div className="px-3">
                         <p className="small text-muted mb-1">Followers</p>

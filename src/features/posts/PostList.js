@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { PostAuthor } from './PostAuthor';
 import { TimeAgo } from './TimeAgo';
 import { ReactionButtons } from './ReactionButtons';
-import { seleectAllPosts, fetchPosts } from './postsSlice';
+import { selectAllPosts, fetchPosts } from './postsSlice';
 
 
 const PostExcerpt = ({ post }) =>{
@@ -33,7 +33,7 @@ const PostExcerpt = ({ post }) =>{
 
 export const PostsList = () => {
     const dispatch = useDispatch();
-    const posts = useSelector(seleectAllPosts);
+    const posts = useSelector(selectAllPosts);
 
 
     const postStatus = useSelector(state => state.posts.status);

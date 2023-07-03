@@ -1,31 +1,27 @@
 import React from 'react';
-import {Card} from '@mui/material/core';
-import {CardActions} from '@mui/material/core/CardActions';
-import {CardContent} from '@mui/material/core/CardContent';
-import {CardMedia} from '@mui/material/core/CardMedia';
-import {Button} from '@mui/material/core/Button';
-import {Typography} from '@mui/material/core/Typography';
+import {Card} from '@material-ui/core';
+import {CardContent} from '@material-ui/core';
+import {CardMedia} from '@material-ui/core';
+import {Typography} from '@material-ui/core';
 
-export const ProfileCard = ({key,profile}) => {
+export const ProfileCard = ({profile}) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image=""
-        title="place holder"
+        component="img"
+        height="175"
+        src ='./imgs/place.jpg'
+        alt="place holder"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {profile.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {profile.username}
+        <Typography variant="body2" color="textSecondary">
+          @{profile.username}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Published Posts</Button>
-      </CardActions>
     </Card>
   );
 }

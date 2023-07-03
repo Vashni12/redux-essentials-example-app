@@ -3,7 +3,7 @@ import {client } from '../../api/client'
 
 
 
-const initialState = []
+const initialState = {users:[]}
 
 
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
@@ -34,7 +34,7 @@ const usersSlice = createSlice({
 
 export const selectAllUsers = state => state.users
 
-export const seleUserById = (state,userId) => {
+export const selectUserById = (state,userId) => {
     state.users.find(user => user.id === userId)
 }
 

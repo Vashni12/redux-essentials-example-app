@@ -14,6 +14,7 @@ import { SinglePostPage } from './features/posts/SinglePostPage'
 import { EditPostForm } from './features/posts/EditPostForm'
 import { Profiles } from './features/users/Profiles'
 import { UserPage } from './features/users/UserPage'
+import { NotificationsList } from './features/notification/notificationList'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               </React.Fragment>
             )}
           />
+          <Route exact path="/notifications" component={NotificationsList}/>
           <Route exact path="/posts/:postId" component={SinglePostPage}/>
           <Route exact path="/createPost" component = {AddPostForm}/>
           <Route exact path="/editPost/:postId" component={EditPostForm}/>

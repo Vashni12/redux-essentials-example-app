@@ -13,7 +13,7 @@ export const Profiles = ()=>{
 
     const profiles = useSelector(selectAllUsers);
     
-    const rendered = profiles.map((profile) => 
+    const rendered = profiles.map(profile => 
         <li key={profile.id} className="card">
 
             <ProfileCard profile={profile}/>

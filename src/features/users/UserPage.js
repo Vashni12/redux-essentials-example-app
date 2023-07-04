@@ -7,16 +7,17 @@ import { selectAllPosts } from '../posts/postsSlice'
 import { ProfileCard } from './ProfileCard'
 
 export const UserPage = ({ match }) => {
+  
+  
   const { userId } = match.params
-  console.log(userId)
-
-  const user = useSelector(state => {
-    console.log(state)
-    selectUserById(state, userId)})
-  console.log(user)
-  
   
 
+ // console.log("test ==========:   ",useSelector(state => selectUserById(state,userId)))
+  
+
+  
+   const user = useSelector(state => selectUserById(state, userId))
+  
   const postsForUser = useSelector(state => {
     const allPosts = selectAllPosts(state)
     return allPosts.filter(post => post.user === userId)
@@ -27,9 +28,11 @@ export const UserPage = ({ match }) => {
       <Link to={`/posts/${post.id}`}>{post.title}</Link>
     </li>
   ))
+  console.log("user : ",user," profile render")
 
   return (
     <section>
+        
       <ProfileCard profile={user}/>
 
       <ul>{postTitles}</ul>
